@@ -69,8 +69,13 @@ describe('Vidjo', () => {
   }); 
 
   it("should respect the window.resize() event", () => { 
-    const lib = new Vidjo(document.body, 'videos/example.mp4');
-    const wrapper = document.body.querySelector(".vidjo-wrapper");
+    const container = document.createElement('div');
+    container.style.width = '100%';
+    container.style.height = '100%';
+    document.body.appendChild(container);
+
+    const lib = new Vidjo(container, 'videos/example.mp4');
+    const wrapper = container.querySelector(".vidjo-wrapper");
     
     const videoWidth = lib._video.videoWidth;
     const videoHeight = lib._video.videoHeight;
