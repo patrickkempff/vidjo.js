@@ -1,5 +1,9 @@
 # vidjo.js
 
+[![license](https://img.shields.io/github/license/patrickkempff/vidjo.js.svg?maxAge=2592000)]()
+[![Build Status](https://travis-ci.org/patrickkempff/vidjo.js.svg?branch=master)](https://travis-ci.org/patrickkempff/vidjo.js)
+[![Coverage Status](https://coveralls.io/repos/github/patrickkempff/vidjo.js/badge.svg?branch=master)](https://coveralls.io/github/patrickkempff/vidjo.js?branch=master)
+
 A simple (es6) library for dealing with background video's.
 
 ```js
