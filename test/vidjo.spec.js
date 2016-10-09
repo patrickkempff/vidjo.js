@@ -15,7 +15,7 @@ describe('Vidjo', () => {
   })
 
   it('should create an video element within a .vidjo-wrapper element', () => {
-    const lib = new Vidjo(document.body, 'videos/ocean.mp4');
+    const lib = new Vidjo(document.body, 'videos/example.mp4');
     
     const wrapper = document.body.querySelector('.vidjo-wrapper');
     expect(wrapper.nodeName).to.be.equal("DIV");
@@ -25,7 +25,7 @@ describe('Vidjo', () => {
   }); 
 
   it("should create the source element according to the given options", () => {
-    const lib = new Vidjo(document.body, 'videos/ocean.mp4');
+    const lib = new Vidjo(document.body, 'videos/example.mp4');
 
     const video = document.body.querySelector(".vidjo-wrapper video");
     const sources = video.querySelectorAll("source");
@@ -34,7 +34,7 @@ describe('Vidjo', () => {
   }); 
 
   it("should create source of the mimetypes according to the given options", () => {
-    const lib = new Vidjo(document.body, 'videos/ocean.mp4'); 
+    const lib = new Vidjo(document.body, 'videos/example.mp4'); 
 
     const video = document.body.querySelector(".vidjo-wrapper video");
     const sources = video.querySelectorAll("source");
@@ -47,7 +47,7 @@ describe('Vidjo', () => {
   });
 
   it("should create source of the video paths according to the given options", () => {
-    const lib = new Vidjo(document.body, 'videos/ocean.mp4'); 
+    const lib = new Vidjo(document.body, 'videos/example.mp4'); 
 
     const video = document.body.querySelector(".vidjo-wrapper video");
     const sources = video.querySelectorAll("source");
@@ -55,12 +55,12 @@ describe('Vidjo', () => {
     for(let i = 0; i < sources.length; i++) {
       const source = sources[i]; 
 
-      expect(source.getAttribute("src")).to.be.equal("videos/ocean.mp4");
+      expect(source.getAttribute("src")).to.be.equal("videos/example.mp4");
     } 
   });
 
   it("should add `test/resources/poster.jpg` as the video poster", () => { 
-    const lib = new Vidjo(document.body, 'videos/ocean.mp4', {poster: 'test/resources/poster.jpg'});
+    const lib = new Vidjo(document.body, 'videos/example.mp4', {poster: 'test/resources/poster.jpg'});
 
     const wrapper = document.body.querySelector(".vidjo-wrapper");
     const backgroundImage = wrapper.style.backgroundImage;
@@ -69,7 +69,7 @@ describe('Vidjo', () => {
   }); 
 
   it("should respect the window.resize() event", () => { 
-    const lib = new Vidjo(document.body, 'videos/ocean.mp4');
+    const lib = new Vidjo(document.body, 'videos/example.mp4');
     const wrapper = document.body.querySelector(".vidjo-wrapper");
     
     const videoWidth = lib._video.videoWidth;
