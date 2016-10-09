@@ -38,7 +38,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/patrickkempff/vidjo-js.git"
+    "url": "https://github.com/patrickkempff/vidjo.js.git"
   },
   "keywords": [
     "video",
@@ -49,7 +49,7 @@
   "author": "Patrick Kempff",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/patrickkempff/vidjo-js/issues"
+    "url": "https://github.com/patrickkempff/vidjo.js/issues"
   },
-  "homepage": "https://github.com/patrickkempff/vidjo"
+  "homepage": "https://github.com/patrickkempff/vidjo.js"
 }
