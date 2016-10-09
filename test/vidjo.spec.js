@@ -77,8 +77,6 @@ describe('Vidjo', () => {
     const wrapperWidth = wrapper.getBoundingClientRect().width;
     const wrapperHeight = wrapper.getBoundingClientRect().height;
 
-    console.log(videoWidth, videoHeight, wrapperWidth, wrapperHeight);
-
     lib._video.style.width = '350px';
     lib._video.style.height = '350px';
 
