@@ -1,4 +1,4 @@
-# Vidjo
+# vidjo.js
 
 A simple (es6) library for dealing with background video's.
 
@@ -9,7 +9,7 @@ const video = new Vidjo(document.body, 'videos/example', {
     'poster': 'videos/poster.jpg',
     'autoplay': true,
     'shouldEnableVideo': () => window.matchMedia( "(min-width: 500px)" ).matches
-    });
+});
 
 ```
 
