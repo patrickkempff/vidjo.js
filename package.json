@@ -1,0 +1,55 @@
+{
+  "name": "vidjo",
+  "version": "0.1.0",
+  "description": "Background video made easy",
+  "main": "lib/vidjo.js",
+  "scripts": {
+    "build": "webpack --mode=build",
+    "dev": "webpack --progress --colors --watch --mode=dev",
+    "test": "mocha tools/setup-test-environment.js \"test/**/*.spec.js\" --reporter spec",
+    "test:coverage": "babel-node node_modules/isparta/bin/isparta cover --root src --report html _mocha -- --require ./tools/setup-test-environment.js \"test/**/*.spec.js\" --reporter progress",
+    "test:coverage:travis": "babel-node node_modules/isparta/bin/isparta cover --root src --report lcovonly _mocha -- --require ./tools/setup-test-environment.js \"test/**/*.spec.js\" && cat ./coverage/lcov.info | node_modules/coveralls/bin/coveralls.js",
+    "test:watch": "npm run test -- --watch",
+    "open:coverage": "npm run test:coverage && open coverage/index.html"
+  },
+  "dependencies": {
+    "object-assign": "^4.1.0"
+  },
+  "devDependencies": {
+    "babel-cli": "6.11.4",
+    "babel-core": "6.11.4",
+    "babel-eslint": "5.0.0",
+    "babel-loader": "6.2.5",
+    "babel-plugin-add-module-exports": "0.1.2",
+    "babel-preset-es2015": "6.9.0",
+    "babel-preset-stage-0": "6.5.0",
+    "babel-preset-stage-1": "6.5.0",
+    "babel-register": "6.16.3",
+    "chai": "3.4.1",
+    "coveralls": "2.11.14",
+    "eslint": "1.7.2",
+    "eslint-loader": "1.1.0",
+    "isparta": "4.0.0",
+    "jsdom": "9.6.0",
+    "mocha": "2.3.4",
+    "sinon": "1.17.6",
+    "webpack": "1.13.1",
+    "yargs": "3.32.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/patrickkempff/vidjo-js.git"
+  },
+  "keywords": [
+    "video",
+    "background",
+    "responsive",
+    "es6"
+  ],
+  "author": "Patrick Kempff",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/patrickkempff/vidjo-js/issues"
+  },
+  "homepage": "https://github.com/patrickkempff/vidjo"
+}
